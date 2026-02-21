@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:musinote/features/library/presentation/views/library_view.dart';
 import 'package:musinote/features/search/presentation/views/search_view.dart';
 import '../../features/artist_profile/presentation/views/artist_profile_view.dart';
 import '../../features/song_notes/presentation/views/song_notes_view.dart';
@@ -11,6 +12,8 @@ Route onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const ArtistProfileView());
     case SearchView.routeName:
       return MaterialPageRoute(builder: (_) => const SearchView());
+    case LibraryView.routeName:
+      return MaterialPageRoute(builder: (_) => const LibraryView());
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(

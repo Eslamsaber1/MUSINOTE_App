@@ -38,6 +38,6 @@ abstract class AppColors {
         Color(0xFF401272),
       ],
       tileMode: TileMode.clamp,
-      stops: [0.0, 0.26, 0.49, 0.9]
+    stops: [0.0, 0.3, 0.6, 1.0],
   );
 }

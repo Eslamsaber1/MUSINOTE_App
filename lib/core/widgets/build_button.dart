@@ -14,6 +14,7 @@ Widget buildButton(
     onTap: onPressed,
     child: Container(
       height: MediaQuery.of(context).size.height * 0.035,
+      padding: const EdgeInsets.symmetric(horizontal: 12),
       decoration: BoxDecoration(
         gradient: gradient,
         color: gradient == null ? color : null,
@@ -30,6 +31,7 @@ Widget buildButton(
               color: color == Colors.white ? Colors.black : Colors.white,
             ),
           ),
+          SizedBox(width: iconPath == null ? 8 : 0),
         ],
       ),
     ),

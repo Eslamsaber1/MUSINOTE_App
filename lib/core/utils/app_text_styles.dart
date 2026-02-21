@@ -9,4 +9,5 @@ abstract class AppTextStyles {
   static const medium14 = TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
   static const bold16 = TextStyle(fontSize: 16, fontWeight: FontWeight.bold);
   static const bold14 = TextStyle(fontSize: 14, fontWeight: FontWeight.bold);
+  static const semiBold24 = TextStyle(fontSize: 24, fontWeight: FontWeight.w600);
 }
