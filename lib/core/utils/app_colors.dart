@@ -5,6 +5,7 @@ abstract class AppColors {
   static const secondary = Color(0xFF9C27B0);
   static const lightGray = Color(0xFF999999);
   static const gray = Color(0xFFD9D9D9);
+  static const lightWhite = Color(0xFFECE6F0); // New light white color
   static const backgroundGradient = LinearGradient(
     colors: [Color(0xFF602F94), Color(0xFF999999)],
     begin: Alignment.topCenter,
@@ -26,5 +27,17 @@ abstract class AppColors {
     ],
     tileMode: TileMode.clamp,
     stops: [0.0, 0.26, 0.49, 0.9]
+  );
+  static const backgroundGradient2 = LinearGradient(
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      colors: [
+        Color(0xFF999999),
+        Color(0xFF8B7E98),
+        Color(0xFF4A2C6B),
+        Color(0xFF401272),
+      ],
+      tileMode: TileMode.clamp,
+      stops: [0.0, 0.26, 0.49, 0.9]
   );
 }
