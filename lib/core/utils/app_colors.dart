@@ -26,42 +26,67 @@ abstract class AppColors {
       Color(0xFF999999), // Bottom (Light Gray)
     ],
     tileMode: TileMode.clamp,
-    stops: [0.0, 0.26, 0.49, 0.9]
+    stops: [0.0, 0.26, 0.49, 0.9],
   );
   static const backgroundGradient2 = LinearGradient(
-      begin: Alignment.topCenter,
-      end: Alignment.bottomCenter,
-      colors: [
-        Color(0xFF999999),
-        Color(0xFF8B7E98),
-        Color(0xFF4A2C6B),
-        Color(0xFF401272),
-      ],
-      tileMode: TileMode.clamp,
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      Color(0xFF999999),
+      Color(0xFF8B7E98),
+      Color(0xFF4A2C6B),
+      Color(0xFF401272),
+    ],
+    tileMode: TileMode.clamp,
     stops: [0.0, 0.3, 0.6, 1.0],
   );
   static const backgroundGradient3 = RadialGradient(
-    center: Alignment.topRight, // Center of the gradient
-    radius:  2, // Spread of the gradient
+    center: Alignment.topRight,
+    // Center of the gradient
+    radius: 2,
+    // Spread of the gradient
     colors: [
       Color(0xFF70568B), // Gold
       Color(0xFFA48EBA), // Dark Red
       Color(0xFF3C1D5C), // Dark Red
     ],
-    stops: [0.3, 0.6, 1], // Transition points
+    stops: [0.3, 0.6, 1],
+    // Transition points
     tileMode: TileMode.clamp, // No repeat beyond radius
   );
 
   static const likedSongsGradient = SweepGradient(
-    colors: [
-      Color(0xFFFFFFFF),
-      Color(0xFF4C2575),
-      Color(0xFFFF004D),
-    ],
+    colors: [Color(0xFFFFFFFF), Color(0xFF4C2575), Color(0xFFFF004D)],
     startAngle: 1,
     endAngle: 5.28319, // 2 * pi radians
     tileMode: TileMode.mirror,
   );
 
-
+  static const logoutGradient = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      Color(0xFF8A6795),
+      Color(0xFF61147B),
+      Color(0xFF3D0C4D),
+      Color(0xFF180320), // bottom very dark
+    ],
+    stops: [0.0, 0.3, 0.5, 1.0],
+    tileMode: TileMode.clamp,
+  );
+  static const avatarGradient = LinearGradient(
+    colors: [
+      Color(0xFF602F94),
+      Color(0xFF715688),
+      Color(0xFF796783),
+      Color(0xFF837C7C), // bottom very dark
+    ],
+  );
+static const logoutButtonGradient = LinearGradient(
+    colors: [
+      Color(0xFF3C1D5C),
+      Color(0xFF4D0994),
+      Color(0xFF7E3EC2),
+    ],
+  );
 }

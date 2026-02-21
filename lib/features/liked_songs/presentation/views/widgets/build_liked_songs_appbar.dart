@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-AppBar buildLikedSongsAppBar() {
+import '../../../../logout/presentation/views/logout_view.dart';
+
+AppBar buildLikedSongsAppBar(BuildContext context) {
   return AppBar(
     backgroundColor: Colors.transparent,
     actionsIconTheme: const IconThemeData(color: Colors.white, size: 24),
@@ -14,7 +16,7 @@ AppBar buildLikedSongsAppBar() {
       IconButton(
         icon: Icon(Icons.settings_outlined, color: Colors.black, size: 24),
         onPressed: () {
-          // Handle more options action
+          Navigator.pushNamed(context, LogoutView.routeName);
         },
       ),
     ],

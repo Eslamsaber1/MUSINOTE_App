@@ -74,7 +74,7 @@ class LikedSongsView extends StatelessWidget {
       backgroundColor: Colors.transparent,
       extendBodyBehindAppBar: true,
       extendBody: true,
-      appBar: buildLikedSongsAppBar(),
+      appBar: buildLikedSongsAppBar(context),
       body: GradientScaffold(
         gradient: AppColors.backgroundGradient3,
         child: Padding(
