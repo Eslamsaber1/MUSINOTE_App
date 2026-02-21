@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:musinote/features/instrument/presentation/views/instrument_view.dart';
 import 'package:musinote/features/library/presentation/views/library_view.dart';
 import 'package:musinote/features/liked_songs/presentation/views/liked_songs_view.dart';
 import 'package:musinote/features/logout/presentation/views/logout_view.dart';
@@ -20,6 +21,8 @@ Route onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const LikedSongsView());
     case LogoutView.routeName:
       return MaterialPageRoute(builder: (_) => const LogoutView());
+    case InstrumentView.routeName:
+      return MaterialPageRoute(builder: (_) => const InstrumentView());
 
     default:
       return MaterialPageRoute(

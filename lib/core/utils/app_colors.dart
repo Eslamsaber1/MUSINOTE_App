@@ -55,11 +55,32 @@ abstract class AppColors {
     tileMode: TileMode.clamp, // No repeat beyond radius
   );
 
+  static const radialGradient = RadialGradient(
+    center: Alignment.topRight,
+    radius: 3,
+    colors: [
+      Color(0xFF9478B1), // Gold
+      Color(0xFF5D2D8F), // Dark Red
+      Color(0xFFBEB1CB), // Dark Red
+    ],
+    stops: [0.0, 0.5, 1],
+    // Transition points
+    tileMode: TileMode.clamp, // No repeat beyond radius
+  );
+
   static const likedSongsGradient = SweepGradient(
     colors: [Color(0xFFFFFFFF), Color(0xFF4C2575), Color(0xFFFF004D)],
     startAngle: 1,
     endAngle: 5.28319, // 2 * pi radians
     tileMode: TileMode.mirror,
+  );
+
+static const instrumentGradient = LinearGradient(
+    colors: [Color(0xFFFFFFFF), Color(0xFFFF004D)],
+  begin: Alignment.bottomLeft,
+  end: Alignment.topRight,
+    stops: [0.0, 1],
+    tileMode: TileMode.clamp,
   );
 
   static const logoutGradient = LinearGradient(

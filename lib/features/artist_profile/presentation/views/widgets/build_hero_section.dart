@@ -75,5 +75,5 @@ Widget buildHeroSection(BuildContext context) {
 }
 
 Widget _iconButton(IconData icon , {VoidCallback? onPressed}) {
-  return IconButton(onPressed: onPressed, color: Colors.white, iconSize: 28, icon: Icon(icon),);
+  return IconButton(onPressed: onPressed, color: Colors.white, iconSize: 28, icon: Icon(icon, color: Colors.white,),);
 }

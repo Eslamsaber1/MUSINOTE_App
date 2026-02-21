@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:musinote/core/utils/app_colors.dart';
 import 'package:musinote/core/widgets/gradient_scaffold.dart';
+import 'package:musinote/features/instrument/presentation/views/instrument_view.dart';
 import 'package:musinote/features/search/presentation/views/widgets/build_playlist_card.dart';
 import 'package:musinote/features/search/presentation/views/widgets/build_recent_item.dart';
 import 'package:musinote/features/search/presentation/views/widgets/build_recent_searches_header.dart';
@@ -8,7 +9,7 @@ import 'package:musinote/features/search/presentation/views/widgets/build_search
 import 'package:musinote/core/widgets/build_search_text_field.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import 'widgets/build_playlists_list.dart';
-import 'widgets/build_search_instrument_text_field.dart';
+import '../../../../core/widgets/build_search_instrument_text_field.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});
@@ -89,7 +90,9 @@ class SearchView extends StatelessWidget {
                   // Instrument search bar
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: buildSearchInstrumentTextField(),
+                    child: buildSearchInstrumentTextField(onTap: (){
+                      Navigator.pushNamed(context, InstrumentView.routeName);
+                    }),
                   ),
                   const SizedBox(height: 16),
                   // Playlist grid
