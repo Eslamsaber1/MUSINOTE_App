@@ -17,12 +17,17 @@ class ForgotPasswordScreen extends StatelessWidget {
         height: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
             colors: [
-              Color(0xFF8E8FFA), 
-              Color(0xFF0F0B15),
+              Color(0xFFFBF7FF), 
+              Color(0xFFA48EBA), 
+              Color(0xFF3155A4), 
+              Color(0xFF4C2576), 
+              Color(0xFF3C1D5C), 
+              Color(0xFF1B0D29), 
             ],
+            stops: [0.10, 0.30, 0.41, 0.60, 0.63, 0.89],
           ),
         ),
         child: SafeArea(
@@ -62,12 +67,9 @@ class ForgotPasswordScreen extends StatelessWidget {
 
                 CustomButton(
                   text: 'Enter',
-                  backgroundColor: const Color(
-                    0xFF2E2E2E,
-                  ),
+                  backgroundColor: const Color(0xFF2E2E2E),
                   textColor: Colors.white,
-                  onPressed: () {
-                  },
+                  onPressed: () {},
                 ),
 
                 SizedBox(height: screenHeight * 0.05),
@@ -87,7 +89,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                 const CustomTextField(
                   label: 'Please Enter Your OTP',
                   hint: 'Please Enter Your OTP',
-                  prefixIcon: Icons.vibration, 
+                  prefixIcon: Icons.vibration,
                   labelColor: Colors.white,
                 ),
 

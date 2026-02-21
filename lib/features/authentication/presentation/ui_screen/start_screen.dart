@@ -20,7 +20,14 @@ class StartScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color(0xFF2D1F3D), Color(0xFF0F0B15)],
+            colors: [
+              Color(0xFF999999), 
+              Color(0xFF3C1D5C), 
+              Color(0xFF7C6497), 
+              Color(0xFF602F94), 
+              Color(0xFF000000), 
+            ],
+            stops: [0.0, 0.28, 0.52, 0.67, 0.74],
           ),
         ),
         child: SafeArea(
@@ -36,12 +43,15 @@ class StartScreen extends StatelessWidget {
                       Row(
                         children: [
                           CircleAvatar(
-                            backgroundColor: Colors.white,
+                            backgroundColor: const Color.fromARGB(
+                              255,
+                              236,
+                              192,
+                              192,
+                            ),
                             radius: screenWidth * 0.045,
-                            child: Icon(
-                              Icons.music_note,
-                              color: Colors.black,
-                              size: screenWidth * 0.05,
+                            backgroundImage: const AssetImage(
+                              'images/logo.jpeg',
                             ),
                           ),
                           SizedBox(width: screenWidth * 0.02),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:musinote/features/home/presentation/ui_screen/home_screen.dart';
 
 class MusicSelectionScreen extends StatefulWidget {
   const MusicSelectionScreen({super.key});
@@ -55,7 +56,12 @@ class _MusicSelectionScreenState extends State<MusicSelectionScreen> {
                         size: 20,
                       ),
                       onPressed: () {
-                        // الانتقال للصفحة الرئيسية بعد الاختيار
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomeScreen(),
+                          ),
+                        );
                       },
                     ),
                   ],
