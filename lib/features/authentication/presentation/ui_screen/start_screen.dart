@@ -109,7 +109,7 @@ class StartScreen extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image.asset(
-                    'images/startpage1.png',
+                    'assets/images/startpage1.png',
                     fit: BoxFit.cover,
                     height: screenHeight * 0.18,
                     width: double.infinity,
@@ -154,13 +154,13 @@ class StartScreen extends StatelessWidget {
                 const JourneyCard(
                   title: 'Beginner Lessons',
                   subtitle: 'Start from zero with simple steps',
-                  imagePath: 'images/startpage2.png',
+                  imagePath: 'assets/images/startpage2.png',
                 ),
                 SizedBox(height: screenHeight * 0.02),
                 const JourneyCard(
                   title: 'Reading Music Sheets',
                   subtitle: 'Learn to read musical symbols',
-                  imagePath: 'images/startpage3.png',
+                  imagePath: 'assets/images/startpage3.png',
                 ),
 
                 SizedBox(height: screenHeight * 0.04),
