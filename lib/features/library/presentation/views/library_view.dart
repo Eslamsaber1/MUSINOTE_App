@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:musinote/core/utils/app_colors.dart';
 import 'package:musinote/core/widgets/build_search_text_field.dart';
 import 'package:musinote/core/widgets/gradient_scaffold.dart';
+import 'package:musinote/features/liked_songs/presentation/views/liked_songs_view.dart';
 import 'widgets/build_filter_chips.dart';
 import 'widgets/build_library_appbar.dart';
 import 'widgets/build_playlists_item.dart';
@@ -67,7 +68,14 @@ class LibraryView extends StatelessWidget {
                   itemCount: _playlists.length,
                   separatorBuilder: (_, __) => const SizedBox(height: 15),
                   itemBuilder: (context, index) {
-                    return buildPlaylistItem(_playlists[index]);
+                    return InkWell(
+                      onTap: (){
+                        if(_playlists[index].title == 'Liked Songs'){
+                          Navigator.pushNamed(context, LikedSongsView.routeName);
+                        }
+                      },
+                        child: buildPlaylistItem(_playlists[index])
+                    );
                   },
                 ),
               ),

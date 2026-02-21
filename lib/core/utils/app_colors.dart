@@ -40,4 +40,28 @@ abstract class AppColors {
       tileMode: TileMode.clamp,
     stops: [0.0, 0.3, 0.6, 1.0],
   );
+  static const backgroundGradient3 = RadialGradient(
+    center: Alignment.topRight, // Center of the gradient
+    radius:  2, // Spread of the gradient
+    colors: [
+      Color(0xFF70568B), // Gold
+      Color(0xFFA48EBA), // Dark Red
+      Color(0xFF3C1D5C), // Dark Red
+    ],
+    stops: [0.3, 0.6, 1], // Transition points
+    tileMode: TileMode.clamp, // No repeat beyond radius
+  );
+
+  static const likedSongsGradient = SweepGradient(
+    colors: [
+      Color(0xFFFFFFFF),
+      Color(0xFF4C2575),
+      Color(0xFFFF004D),
+    ],
+    startAngle: 1,
+    endAngle: 5.28319, // 2 * pi radians
+    tileMode: TileMode.mirror,
+  );
+
+
 }
