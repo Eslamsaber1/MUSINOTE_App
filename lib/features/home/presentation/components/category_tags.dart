@@ -1,23 +1,51 @@
 import 'package:flutter/material.dart';
+import 'package:musinote/core/utils/app_text_styles.dart';
 
 class CategoryTags extends StatelessWidget {
-  final List<String> tags;
-  const CategoryTags({super.key, required this.tags});
+  const CategoryTags({super.key,});
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      spacing: 12,
-      runSpacing: 12,
-      children: tags.map((tag) => Container(
-        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-        decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.08),
-          borderRadius: BorderRadius.circular(25),
-          border: Border.all(color: Colors.white10),
+    return Column(
+      spacing: 16,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(child: musicCard(title: 'Chill Vibes', color: Color(0x4D000000))),
+            SizedBox(width: 40,),
+            Expanded(child: musicCard(title: 'Classic', color: Color(0x4D000000))),
+          ],
         ),
-        child: Text(tag, style: const TextStyle(color: Colors.white, fontSize: 13)),
-      )).toList(),
+      Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(child: musicCard(title: 'Jazz', gradient: LinearGradient(colors: [Color(0xff40397A), Color(0xff602F94)]))),
+            SizedBox(width: 40,),
+            Expanded(child: musicCard(title: 'Metal', gradient: LinearGradient(colors: [Color(0xff8573A7), Color(0xff735E8A)]))),
+          ],
+        ),
+      Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(child: musicCard(title: 'Rock', color: Color(0xff8573A7))),
+            SizedBox(width: 40,),
+            Expanded(child: musicCard(title: 'Peaceful Piano', color: Color(0x8F3421C7))),
+          ],
+        ),
+      ]
+    );
+  }
+
+  Widget musicCard({Color? color, required String title,  Gradient? gradient,}){
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+      decoration: BoxDecoration(
+        color: color,
+        gradient: gradient,
+        borderRadius: BorderRadius.circular(52),
+      ),
+      child: Text(title, style: AppTextStyles.semiBold16.copyWith(color: Colors.white)),
     );
   }
 }

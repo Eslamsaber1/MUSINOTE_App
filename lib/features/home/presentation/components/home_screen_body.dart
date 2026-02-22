@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:musinote/core/utils/app_text_styles.dart';
 import 'package:musinote/features/home/presentation/components/category_tags.dart';
 import 'package:musinote/features/home/presentation/components/featured_music_card.dart';
 import 'package:musinote/features/home/presentation/components/home_header.dart';
@@ -9,8 +10,6 @@ class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({
     super.key,
   });
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -46,49 +45,30 @@ class HomeScreenBody extends StatelessWidget {
 
                   const HomeHeader(),
 
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 8),
 
-                  const CategoryTags(
-                    tags: [
-                      'Chill Vibes',
-                      'Classic',
-                      'Jazz',
-                      'Metal',
-                      'Rock',
-                      'Peaceful Piano',
-                    ],
-                  ),
+                  const CategoryTags(),
 
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 16),
 
                   const Text(
                     'Featured Music',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: AppTextStyles.semiBold20,
                   ),
-                  const SizedBox(height: 15),
-
                   const FeaturedMusicCard(),
 
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 16),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
                       Text(
                         'Recently Played',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: AppTextStyles.semiBold20,
                       ),
                       Text(
                         'See all',
-                        style: TextStyle(color: Colors.white54, fontSize: 14),
+                        style: AppTextStyles.semiBold12,
                       ),
                     ],
                   ),

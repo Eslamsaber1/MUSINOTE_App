@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:musinote/core/utils/app_text_styles.dart';
+import 'package:musinote/core/widgets/custom_profile_container.dart';
 
 AppBar buildLibraryAppBar() {
   return AppBar(
     title: Row(
       children: [
-        Container(
-          width: 38,
-          height: 38,
-          decoration: BoxDecoration(
-            color: Color(0xffEADDFF),
-            shape: BoxShape.circle,
-          ),
-          child:SvgPicture.asset('assets/icons/Avatar Placeholder.svg',width: 24, height: 24, fit: BoxFit.scaleDown),
-        ),
+        ProfileContainer(),
         const SizedBox(width: 10),
         Text(
           'Your Library',

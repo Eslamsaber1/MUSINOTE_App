@@ -14,7 +14,9 @@ class FeaturedMusicCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         gradient: const LinearGradient(
-          colors: [Color(0xFFE0E5B6), Color(0xFF94A684)],
+          colors: [Color(0xFF6D5E7D), Color(0xFFEBEFAB)],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
         ),
       ),
       child: Row(
@@ -45,7 +47,7 @@ class FeaturedMusicCard extends StatelessWidget {
                     label: const Text('Play'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green,
-                      foregroundColor: Colors.white,
+                      foregroundColor: Colors.black,
                       shape: StadiumBorder(),
                     ),
                   )

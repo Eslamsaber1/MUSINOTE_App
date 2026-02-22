@@ -23,9 +23,9 @@ class SongDetails extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(artist, style: const TextStyle(color: Colors.white70, fontSize: 16)),
-            Text(title, style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold)),
-            Text('$album • $genre', style: const TextStyle(color: Colors.white54, fontSize: 14)),
+            Text(artist, style: const TextStyle( fontSize: 16)),
+            Text(title, style: const TextStyle( fontSize: 24, fontWeight: FontWeight.bold)),
+            Text('$album \n $genre', style: const TextStyle(fontSize: 14)),
           ],
         ),
       ),

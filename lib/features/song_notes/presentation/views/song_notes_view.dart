@@ -5,7 +5,7 @@ import 'package:musinote/features/song_notes/presentation/views/widgets/note_hea
 import 'package:musinote/features/song_notes/presentation/views/widgets/notes_section.dart';
 import 'package:musinote/core/widgets/play_back_controlls.dart';
 import 'package:musinote/core/widgets/song_info_section.dart';
-import 'package:musinote/features/song_notes/presentation/views/widgets/note_section_app_bar.dart';
+import 'package:musinote/core/widgets/note_section_app_bar.dart';
 import 'package:musinote/features/song_notes/presentation/views/widgets/queue_buttom.dart';
 
 class SongNotesView extends StatelessWidget {
@@ -32,7 +32,10 @@ class SongNotesView extends StatelessWidget {
               SizedBox(height: 24),
               SongInfoSection(),
               SizedBox(height: 30),
-              PlaybackControls(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32),
+                child: PlaybackControls(),
+              ),
             ],
           ),
         ),

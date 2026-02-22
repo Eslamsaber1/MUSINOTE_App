@@ -15,9 +15,9 @@ class MusicProgressBar extends StatelessWidget {
               pressedElevation: 8.0,
             ),
             overlayShape: const RoundSliderOverlayShape(overlayRadius: 12.0),
-            activeTrackColor: Colors.white,
+            activeTrackColor: Colors.black,
             inactiveTrackColor: Colors.white24,
-            thumbColor: Colors.white,
+            thumbColor: Colors.black,
             trackShape: const RectangularSliderTrackShape(),
           ),
           child: Slider(
