@@ -58,7 +58,7 @@ class LogoutView extends StatelessWidget {
             buildUserInfo(),
             const SizedBox(height: 60),
             // Log out button
-            buildLogoutBt(),
+            buildLogoutBt(context),
             const SizedBox(height: 12),
             // Back to Home button
             buildBackToHomeBt(context),

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:musinote/core/utils/app_text_styles.dart';
+import 'package:musinote/features/home/presentation/ui_screen/home_screen.dart';
 
 Widget buildBackToHomeBt(BuildContext context) {
   return SizedBox(
     width: double.infinity,
     child: OutlinedButton.icon(
-      onPressed: () => Navigator.maybePop(context),
+      onPressed: () => Navigator.pushNamedAndRemoveUntil(context, HomeScreen.routeName, (route) => false),
       icon: const Icon(Icons.home_outlined, color: Colors.black, size: 30),
       label:  Padding(
         padding: const EdgeInsets.symmetric(vertical: 14.0),
