@@ -45,7 +45,7 @@ class CategoryTags extends StatelessWidget {
         gradient: gradient,
         borderRadius: BorderRadius.circular(52),
       ),
-      child: Text(title, style: AppTextStyles.semiBold16.copyWith(color: Colors.white)),
+      child: Text(title, style: AppTextStyles.semiBold14.copyWith(color: Colors.white)),
     );
   }
 }
