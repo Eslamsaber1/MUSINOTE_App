@@ -104,7 +104,7 @@ lib/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/musinote.git
+git clone https://github.com/Eslamsaber1/musinote.git
 cd musinote
 
 # Install dependencies
