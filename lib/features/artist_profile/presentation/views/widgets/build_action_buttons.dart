@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:musinote/core/utils/app_colors.dart';
 import 'package:musinote/core/widgets/build_button.dart';
-import 'package:musinote/features/library/presentation/views/library_view.dart';
-import 'package:musinote/features/search/presentation/views/search_view.dart';
 
 Widget buildActionButtons(BuildContext context) {
   return Padding(
@@ -16,9 +14,7 @@ Widget buildActionButtons(BuildContext context) {
             iconPath: 'assets/icons/follow.svg',
             label: 'Follow',
             gradient: AppColors.followButtonGradient,
-            onPressed: () {
-              Navigator.pushNamed(context, SearchView.routeName);
-            },
+            onPressed: () {},
           ),
         ),
         const SizedBox(width: 48),
@@ -30,9 +26,7 @@ Widget buildActionButtons(BuildContext context) {
             iconPath: 'assets/icons/Shuffle2.svg',
             label: 'Shuffle Play',
             color: Colors.white,
-            onPressed: () {
-              Navigator.pushNamed(context, LibraryView.routeName);
-            },
+            onPressed: () {},
           ),
         ),
       ],

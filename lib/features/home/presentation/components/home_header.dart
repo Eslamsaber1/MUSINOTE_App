@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:musinote/features/logout/presentation/views/logout_view.dart';
 import 'package:musinote/features/stats/presentation/ui_screen/StatsScreen.dart';
 
 class HomeHeader extends StatelessWidget {
@@ -29,18 +30,20 @@ class HomeHeader extends StatelessWidget {
         ),
         Row(
           children: [
-            const Icon(
-              Icons.settings_outlined,
-              color: Colors.white70,
-              size: 28,
+            GestureDetector(
+              onTap: (){
+                Navigator.pushNamed(context, LogoutView.routeName);
+              },
+              child: const Icon(
+                Icons.settings_outlined,
+                color: Colors.white70,
+                size: 28,
+              ),
             ),
             const SizedBox(width: 15),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const StatsScreen()),
-                );
+                Navigator.pushNamed(context, StatsScreen.routeName);
               },
               child: CircleAvatar(
                 radius: 22,

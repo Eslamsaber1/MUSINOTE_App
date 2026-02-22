@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:musinote/features/practice_mode/presentation/views/practice_mode_view.dart';
+import 'package:musinote/features/song_notes/presentation/views/song_notes_view.dart';
 import '../components/player_header.dart';
 import '../components/album_art.dart';
 import '../components/song_details.dart';
@@ -9,6 +11,7 @@ import '../components/player_bottom_actions.dart';
 class PlayerScreen extends StatelessWidget {
   const PlayerScreen({super.key});
 
+  static const String routeName = '/player_screen';
   @override
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
@@ -49,7 +52,7 @@ class PlayerScreen extends StatelessWidget {
                         SizedBox(
                           height: screenHeight * 0.35,
                           child: const AlbumArt(
-                            imagePath: 'images/Adele 2.png',
+                            imagePath: 'assets/images/Adele 2.png',
                           ),
                         ),
                         SizedBox(height: screenHeight * 0.04),
@@ -67,32 +70,38 @@ class PlayerScreen extends StatelessWidget {
 
                         Column(
                           children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Icon(
-                                  Icons.music_note,
-                                  color: Colors.white,
-                                  size: 20,
-                                ),
-                                const SizedBox(width: 10),
-                                Text(
-                                  'Notes',
-                                  style: TextStyle(
+                            GestureDetector(
+                              onTap: ()=> Navigator.pushNamed(context, SongNotesView.routeName),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  const Icon(
+                                    Icons.music_note,
                                     color: Colors.white,
-                                    fontSize: screenWidth * 0.045,
-                                    fontWeight: FontWeight.bold,
+                                    size: 20,
                                   ),
-                                ),
-                              ],
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    'Notes',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: screenWidth * 0.045,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                             const SizedBox(height: 5),
-                            Text(
-                              'Practice Mode',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: screenWidth * 0.04,
-                                fontWeight: FontWeight.w600,
+                            GestureDetector(
+                              onTap: ()=> Navigator.pushNamed(context, PracticeModeView.routeName),
+                              child: Text(
+                                'Practice Mode',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: screenWidth * 0.04,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                           ],

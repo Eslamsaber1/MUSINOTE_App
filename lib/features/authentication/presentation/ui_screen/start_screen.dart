@@ -7,6 +7,7 @@ import '../components/journey_card.dart';
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
 
+  static const String routeName = '/start_screen';
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
@@ -51,7 +52,7 @@ class StartScreen extends StatelessWidget {
                             ),
                             radius: screenWidth * 0.045,
                             backgroundImage: const AssetImage(
-                              'images/logo.jpeg',
+                              'assets/images/logo.jpeg',
                             ),
                           ),
                           SizedBox(width: screenWidth * 0.02),
@@ -67,12 +68,7 @@ class StartScreen extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const LoginScreen(),
-                            ),
-                          );
+                          Navigator.pushNamed(context, LoginScreen.routeName);
                         },
                         child: Text(
                           'Sign in',
@@ -207,12 +203,7 @@ class StartScreen extends StatelessWidget {
                         textColor: Colors.black,
                         height: screenHeight * 0.055,
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const RegisterScreen(),
-                            ),
-                          );
+                          Navigator.pushNamed(context, RegisterScreen.routeName);
                         },
                       ),
                     ],

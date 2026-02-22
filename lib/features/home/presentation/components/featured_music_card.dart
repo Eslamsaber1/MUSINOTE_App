@@ -22,7 +22,7 @@ class FeaturedMusicCard extends StatelessWidget {
           ClipRRect(
             borderRadius: const BorderRadius.only(topLeft: Radius.circular(25), bottomLeft: Radius.circular(25)),
             child: Image.asset(
-              'images/Loha Bahta 1.png',
+              'assets/images/Loha Bahta 1.png',
               width: width * 0.35,
               height: double.infinity,
               fit: BoxFit.cover,

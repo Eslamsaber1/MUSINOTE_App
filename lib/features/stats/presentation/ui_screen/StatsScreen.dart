@@ -8,6 +8,7 @@ import '../components/genre_distribution_card.dart';
 class StatsScreen extends StatelessWidget {
   const StatsScreen({super.key});
 
+  static const String routeName = '/stats_screen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
