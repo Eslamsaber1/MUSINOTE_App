@@ -110,4 +110,14 @@ static const logoutButtonGradient = LinearGradient(
       Color(0xFF7E3EC2),
     ],
   );
+static const linearGradient2 = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      Color(0xFF2F144C),
+      Color(0xFF8349C0),
+      Color(0xFF999999),
+    ],
+  stops: [0.0, 0.8, 1.0],
+  );
 }

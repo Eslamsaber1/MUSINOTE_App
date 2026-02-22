@@ -3,8 +3,8 @@ import 'package:musinote/core/utils/app_colors.dart';
 import 'package:musinote/core/widgets/gradient_scaffold.dart';
 import 'package:musinote/features/song_notes/presentation/views/widgets/note_header.dart';
 import 'package:musinote/features/song_notes/presentation/views/widgets/notes_section.dart';
-import 'package:musinote/features/song_notes/presentation/views/widgets/play_back_controlls.dart';
-import 'package:musinote/features/song_notes/presentation/views/widgets/song_info_section.dart';
+import 'package:musinote/core/widgets/play_back_controlls.dart';
+import 'package:musinote/core/widgets/song_info_section.dart';
 import 'package:musinote/features/song_notes/presentation/views/widgets/note_section_app_bar.dart';
 import 'package:musinote/features/song_notes/presentation/views/widgets/queue_buttom.dart';
 

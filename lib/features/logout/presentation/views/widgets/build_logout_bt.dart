@@ -5,7 +5,7 @@ import 'package:musinote/core/utils/app_text_styles.dart';
 Widget buildLogoutBt() {
   return Container(
     width: double.infinity,
-    height: 56,
+    padding: EdgeInsetsGeometry.symmetric(vertical: 3),
     decoration: BoxDecoration(
       gradient: AppColors.logoutButtonGradient,
       borderRadius: BorderRadius.circular(6),

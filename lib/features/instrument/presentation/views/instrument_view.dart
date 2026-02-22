@@ -51,23 +51,25 @@ class InstrumentView extends StatelessWidget {
       appBar: buildInstrumentAppBar(context),
       body: GradientScaffold(
         gradient: AppColors.radialGradient,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Column(
-            children: [
-              const SizedBox(height: kToolbarHeight + 40),
-              buildInstrumentInfo(),
-              const SizedBox(height: 27),
-              buildSearchInstrumentTextField(),
-              const SizedBox(height: 23),
-              // Instrument cards
-              ...instruments.map((item) => Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                child: buildInstrumentCard(item),
-              )),
-
-              const SizedBox(height: 16),
-            ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Column(
+              children: [
+                const SizedBox(height: kToolbarHeight + 40),
+                buildInstrumentInfo(),
+                const SizedBox(height: 27),
+                buildSearchInstrumentTextField(),
+                const SizedBox(height: 23),
+                // Instrument cards
+                ...instruments.map((item) => Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  child: buildInstrumentCard(item),
+                )),
+          
+                const SizedBox(height: 16),
+              ],
+            ),
           ),
         )
       ),

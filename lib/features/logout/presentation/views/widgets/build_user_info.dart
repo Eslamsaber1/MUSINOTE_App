@@ -22,18 +22,20 @@ Widget buildUserInfo() {
           child: SvgPicture.asset('assets/icons/person.svg', fit: BoxFit.scaleDown),
         ),
         const SizedBox(width: 12),
-        const Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Username',
-              style: AppTextStyles.regular16,
-            ),
-            Text(
-              'User@musinote.com',
-              style: AppTextStyles.regular14,
-            ),
-          ],
+        Expanded(
+          child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Username',
+                style: AppTextStyles.regular16,
+              ),
+              Text(
+                'User@musinote.com',
+                style: AppTextStyles.regular14,
+              ),
+            ],
+          ),
         ),
       ],
     ),
