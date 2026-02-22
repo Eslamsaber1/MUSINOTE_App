@@ -14,7 +14,9 @@ class FeaturedMusicCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         gradient: const LinearGradient(
-          colors: [Color(0xFFE0E5B6), Color(0xFF94A684)],
+          colors: [Color(0xFF6D5E7D), Color(0xFFEBEFAB)],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
         ),
       ),
       child: Row(
@@ -22,7 +24,7 @@ class FeaturedMusicCard extends StatelessWidget {
           ClipRRect(
             borderRadius: const BorderRadius.only(topLeft: Radius.circular(25), bottomLeft: Radius.circular(25)),
             child: Image.asset(
-              'images/Loha Bahta 1.png',
+              'assets/images/Loha Bahta 1.png',
               width: width * 0.35,
               height: double.infinity,
               fit: BoxFit.cover,
@@ -45,7 +47,7 @@ class FeaturedMusicCard extends StatelessWidget {
                     label: const Text('Play'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green,
-                      foregroundColor: Colors.white,
+                      foregroundColor: Colors.black,
                       shape: StadiumBorder(),
                     ),
                   )

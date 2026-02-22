@@ -9,6 +9,7 @@ import '../components/social_login_button.dart';
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
+  static const String routeName = '/login_screen';
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
@@ -110,12 +111,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ForgotPasswordScreen(),
-                          ),
-                        );
+                        Navigator.pushNamed(context, ForgotPasswordScreen.routeName);
                       },
                       child: Text(
                         'Forgot password?',
@@ -135,12 +131,7 @@ class LoginScreen extends StatelessWidget {
                   backgroundColor: const Color(0xFF2E2E2E),
                   textColor: Colors.white,
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const MusicSelectionScreen(),
-                      ),
-                    );
+                    Navigator.pushNamed(context, MusicSelectionScreen.routeName);
                   },
                 ),
 

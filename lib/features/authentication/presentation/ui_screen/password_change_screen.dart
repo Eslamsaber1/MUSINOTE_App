@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:musinote/features/authentication/presentation/ui_screen/login_screen.dart';
 import '../components/custom_button.dart';
 import '../components/custom_text_field.dart';
 
 class PasswordChangeScreen extends StatelessWidget {
   const PasswordChangeScreen({super.key});
 
+  static const String routeName = '/password_change_screen';
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
@@ -92,7 +94,7 @@ class PasswordChangeScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.pushNamedAndRemoveUntil(
                             context,
-                            '/login',
+                            LoginScreen.routeName,
                             (route) => false,
                           );
                         },

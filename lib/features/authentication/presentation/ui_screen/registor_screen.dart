@@ -5,6 +5,7 @@ import '../components/custom_text_field.dart';
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
 
+  static const String routeName = '/register_screen';
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;

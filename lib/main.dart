@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:musinote/core/utils/on_generate_routes.dart';
 import 'package:musinote/features/authentication/presentation/ui_screen/start_screen.dart';
 
 void main() {
@@ -12,11 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const StartScreen(),
+      initialRoute: StartScreen.routeName,
+      onGenerateRoute: onGenerateRoutes,
     );
   }
 }

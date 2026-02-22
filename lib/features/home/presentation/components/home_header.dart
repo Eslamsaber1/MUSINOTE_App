@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:musinote/core/utils/app_text_styles.dart';
+import 'package:musinote/core/widgets/custom_profile_container.dart';
+import 'package:musinote/features/logout/presentation/views/logout_view.dart';
 import 'package:musinote/features/stats/presentation/ui_screen/StatsScreen.dart';
 
 class HomeHeader extends StatelessWidget {
@@ -6,51 +9,42 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double screenWidth = MediaQuery.of(context).size.width;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'Good Evening',
-              style: TextStyle(color: Colors.white70, fontSize: 16),
+              style: TextStyle(color: Colors.black, fontSize: 16),
             ),
+            SizedBox(height: 8,),
             Text(
               'Music',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 26,
-                fontWeight: FontWeight.bold,
-              ),
+              style: AppTextStyles.semiBold20,
             ),
           ],
         ),
         Row(
           children: [
-            const Icon(
-              Icons.settings_outlined,
-              color: Colors.white70,
-              size: 28,
+            GestureDetector(
+              onTap: (){
+                Navigator.pushNamed(context, LogoutView.routeName);
+              },
+              child: const Icon(
+                Icons.settings_outlined,
+                color: Colors.black,
+                size: 37,
+              ),
             ),
             const SizedBox(width: 15),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const StatsScreen()),
-                );
+                Navigator.pushNamed(context, StatsScreen.routeName);
               },
-              child: CircleAvatar(
-                radius: 22,
-                backgroundColor: Colors.white24,
-                child: Icon(
-                  Icons.person,
-                  color: Colors.white,
-                  size: screenWidth * 0.06,
-                ),
-              ),
+              child: ProfileContainer(),
             ),
           ],
         ),

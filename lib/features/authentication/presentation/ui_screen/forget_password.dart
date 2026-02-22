@@ -6,6 +6,7 @@ import '../components/custom_text_field.dart';
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({super.key});
 
+  static const String routeName = '/forgot_password_screen';
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
@@ -100,12 +101,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                   backgroundColor: const Color(0xFF2E2E2E),
                   textColor: Colors.white,
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const PasswordChangeScreen(),
-                      ),
-                    );
+                    Navigator.pushNamed(context, PasswordChangeScreen.routeName);
                   },
                 ),
               ],

@@ -1,37 +1,34 @@
 import 'package:flutter/material.dart';
-import '../components/player_header.dart';
+import 'package:musinote/core/utils/app_colors.dart';
+import 'package:musinote/core/utils/app_text_styles.dart';
+import 'package:musinote/core/widgets/play_back_controlls.dart';
+import 'package:musinote/features/practice_mode/presentation/views/practice_mode_view.dart';
+import 'package:musinote/features/song_notes/presentation/views/song_notes_view.dart';
+import 'package:musinote/core/widgets/note_section_app_bar.dart';
 import '../components/album_art.dart';
 import '../components/song_details.dart';
 import '../components/music_progress_bar.dart';
-import '../components/player_controls.dart';
 import '../components/player_bottom_actions.dart';
 
 class PlayerScreen extends StatelessWidget {
   const PlayerScreen({super.key});
 
+  static const String routeName = '/player_screen';
   @override
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
     final double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      backgroundColor: Colors.transparent,
+      extendBodyBehindAppBar: true,
+      extendBody: true,
+      appBar: NoteSectionAppBar(),
       body: Container(
         width: screenWidth,
         height: screenHeight,
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color(0xFFFBF7FF),
-              Color(0xFFA48EBA),
-              Color(0xFF3155A4),
-              Color(0xFF4C2576),
-              Color(0xFF3C1D5C),
-              Color(0xFF1B0D29),
-            ],
-            stops: [0.10, 0.30, 0.41, 0.60, 0.63, 0.89],
-          ),
+          gradient: AppColors.backgroundGradient1,
         ),
         child: SafeArea(
           child: Column(
@@ -44,12 +41,12 @@ class PlayerScreen extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        const PlayerHeader(playlistName: 'Daily Mix 1'),
+                        Text('Daily Mix 1', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                         SizedBox(height: screenHeight * 0.03),
                         SizedBox(
                           height: screenHeight * 0.35,
                           child: const AlbumArt(
-                            imagePath: 'images/Adele 2.png',
+                            imagePath: 'assets/images/Adele 2.png',
                           ),
                         ),
                         SizedBox(height: screenHeight * 0.04),
@@ -62,37 +59,32 @@ class PlayerScreen extends StatelessWidget {
                         SizedBox(height: screenHeight * 0.03),
                         const MusicProgressBar(),
                         SizedBox(height: screenHeight * 0.02),
-                        const PlayerControls(),
+                        const PlaybackControls(),
                         SizedBox(height: screenHeight * 0.02),
 
                         Column(
                           children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Icon(
-                                  Icons.music_note,
-                                  color: Colors.white,
-                                  size: 20,
-                                ),
-                                const SizedBox(width: 10),
-                                Text(
-                                  'Notes',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: screenWidth * 0.045,
-                                    fontWeight: FontWeight.bold,
+                            GestureDetector(
+                              onTap: ()=> Navigator.pushNamed(context, SongNotesView.routeName),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  const Icon(
+                                    Icons.music_note,
+                                    color: Colors.black,
+                                    size: 20,
                                   ),
-                                ),
-                              ],
+                                  const SizedBox(width: 10),
+                                  Text('Notes', style: AppTextStyles.extraBold18),
+                                ],
+                              ),
                             ),
                             const SizedBox(height: 5),
-                            Text(
-                              'Practice Mode',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: screenWidth * 0.04,
-                                fontWeight: FontWeight.w600,
+                            GestureDetector(
+                              onTap: ()=> Navigator.pushNamed(context, PracticeModeView.routeName),
+                              child: Text(
+                                'Practice Mode',
+                                style: AppTextStyles.extraBold18,
                               ),
                             ),
                           ],

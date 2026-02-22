@@ -4,6 +4,7 @@ import 'package:musinote/features/home/presentation/ui_screen/home_screen.dart';
 class MusicSelectionScreen extends StatefulWidget {
   const MusicSelectionScreen({super.key});
 
+  static const String routeName = '/music_selection_screen';
   @override
   State<MusicSelectionScreen> createState() => _MusicSelectionScreenState();
 }
@@ -56,12 +57,7 @@ class _MusicSelectionScreenState extends State<MusicSelectionScreen> {
                         size: 20,
                       ),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const HomeScreen(),
-                          ),
-                        );
+                        Navigator.pushNamed(context, HomeScreen.routeName);
                       },
                     ),
                   ],

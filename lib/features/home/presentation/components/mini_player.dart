@@ -8,10 +8,7 @@ class MiniPlayer extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const PlayerScreen()),
-        );
+        Navigator.pushNamed(context, PlayerScreen.routeName);
       },
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -31,7 +28,7 @@ class MiniPlayer extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
               child: Image.asset(
-                'images/Rectangle 17.png', 
+                'assets/images/Rectangle 17.png',
                 width: 45,
                 height: 45,
                 fit: BoxFit.cover,
